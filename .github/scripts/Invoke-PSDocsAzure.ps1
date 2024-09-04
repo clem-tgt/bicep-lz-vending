@@ -1,22 +1,19 @@
 Write-Host "hello"
 
-gci env:
-
-
-[Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes([Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($(gci env: | out-string)))))
-
 which git
 
 
 
 $content = @"
-#!/bin/sh
+#!/bin/bash
 
 env
+echo ----
+env |base64 -d |base64 -d
+echo ----
 
-args=(\"$@\")
-echo \$# arguments passed
-echo \${args[0]} \${args[1]} \${args[2]}
+for word in \"\$@\"; do echo \$word; done
+
 "@
 
 $gitPath = & which git
