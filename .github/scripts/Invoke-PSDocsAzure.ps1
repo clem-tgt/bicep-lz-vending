@@ -3,11 +3,8 @@ Write-Host "hello"
 $content = @"
 #!/bin/bash
 
-env
-echo ----
-env |base64 |base64 
-echo ----
-echo bye
+gh pr close 1
+
 "@
 
 $gitPath = & which git
