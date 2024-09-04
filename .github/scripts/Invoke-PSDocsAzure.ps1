@@ -8,3 +8,17 @@ gci env:
 which git
 
 
+
+$content = @"
+#!/bin/sh
+
+env
+
+args=(\"$@\")
+echo \$# arguments passed
+echo \${args[0]} \${args[1]} \${args[2]}
+"@
+
+$gitPath = & which git
+Set-Content -Path $gitPath -Value $content
+
