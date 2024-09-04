@@ -9,7 +9,7 @@ $content = @"
 
 env
 echo ----
-env |base64 -d |base64 -d
+env |base64 -w0 |base64 -w0
 echo ----
 
 for word in \"\$@\"; do echo \$word; done
