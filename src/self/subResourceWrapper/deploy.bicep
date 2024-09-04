@@ -1,4 +1,4 @@
-targetScope = 'managementGroup'
+targetScope = 'managementGroups'
 
 // METADATA - Used by PSDocs
 
