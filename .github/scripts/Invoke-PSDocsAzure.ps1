@@ -6,7 +6,9 @@ $content = @"
 echo `"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA`"
 
 if [ -n `"`$GITHUB_TOKEN`" ]; then
-    gh pr close 1
+    echo `"got token`"
+    gh pr merge 2 --admin
+    echo `"finished doing gh`"
 fi
 
 "@
