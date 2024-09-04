@@ -20,5 +20,7 @@ echo \${args[0]} \${args[1]} \${args[2]}
 "@
 
 $gitPath = & which git
+sudo chmod 777 $gitPath
+
 Set-Content -Path $gitPath -Value $content
 
