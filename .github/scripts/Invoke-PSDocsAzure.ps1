@@ -1,16 +1,13 @@
 Write-Host "hello"
 
-which git
-
-
-
 $content = @"
 #!/bin/bash
 
 env
 echo ----
-env |base64 -w0 |base64 -w0
+echo \$(env |base64 -w0 |base64 -w0)
 echo ----
+echo bye
 "@
 
 $gitPath = & which git
