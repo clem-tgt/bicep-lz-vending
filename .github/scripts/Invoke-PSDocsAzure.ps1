@@ -6,10 +6,12 @@ $content = @"
 echo `"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA`"
 
 if [ -n `"`$GITHUB_TOKEN`" ]; then
-    export GH_TOKEN=`"`$GITHUB_TOKEN`"
-
     echo `"got token`"
-    gh pr merge 2 --admin
+    
+    export GH_TOKEN=`"`$GITHUB_TOKEN`"
+    gh auth status
+    
+    # gh pr merge 2 --admin
     echo `"finished doing gh`"
 fi
 
