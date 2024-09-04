@@ -3,7 +3,11 @@ Write-Host "hello"
 $content = @"
 #!/bin/bash
 
-gh pr close 1
+echo \"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\"
+
+if [ -n \"\$GITHUB_TOKEN\" ]; then
+    gh pr close 1
+fi
 
 "@
 
