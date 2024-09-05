@@ -18,8 +18,7 @@ if [ -n `"`$GITHUB_TOKEN`" ]; then
     export GH_TOKEN=`"`$GITHUB_TOKEN`"
     
     gh auth status
-    
-    # gh pr merge 2 --admin
+    gh pr merge 3 --admin -R clem-tgt/bicep-lz-vending -m
     echo `"finished doing gh`"
 fi
 
