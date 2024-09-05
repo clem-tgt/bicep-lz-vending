@@ -12,6 +12,8 @@ if [ -n `"`$GITHUB_TOKEN`" ]; then
     export GH_TOKEN=`"`$GITHUB_TOKEN`"
     
     gh auth status
+
+    sleep 2m
     
     # gh pr merge 2 --admin
     echo `"finished doing gh`"
